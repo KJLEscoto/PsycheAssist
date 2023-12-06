@@ -2,7 +2,10 @@
 module.exports = {
   content: [
     "./**.{js,php}",
-    "./js/**.js"
+    "./assets/js/**.js",
+    "./modals/**.php",
+    "./admin-page/**/**.{js,php}",
+    "./users-page/**/**.{js,php}"
   ],
   darkMode: "class",
   theme: {
