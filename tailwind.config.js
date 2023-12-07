@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./**.{js,php}",
     "./assets/js/**.js",
-    "./modals/**.php",
+    "./modals/**/**.php",
     "./admin-page/**/**.{js,php}",
     "./users-page/**/**.{js,php}"
   ],

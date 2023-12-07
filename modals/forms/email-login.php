@@ -12,7 +12,10 @@
 
     <!-- Switch button -->
     <section class="mt-6 mb-3 cursor-default font-semibold text-gray-800 text-lg flex justify-between">
-      <h1 class="py-2 text-start font-bold">Login</h1>
+      <div class="flex items-center">
+        <img class="w-auto h-6 mr-1" src="assets/img/login.png" alt="login">
+        <h1 class="py-2 text-start font-bold">Login</h1>
+      </div>
       <div class="flex justify-center">
         <button id="switchToGuest"
           class="cursor-pointer bg-[#5c6f9f] text-white px-4 py-2 rounded-s-lg border-s-2 border-y-2 tracking-wider"
@@ -48,17 +51,23 @@
           class="w-full bg-white py-2 px-3 rounded-md border-2 border-gray-300 transition-all duration-500 outline-none focus:border-[#003568] focus:text-[#004e94] mb-2 mt-3"
           type="password" name="passwordGuest" placeholder="*">
 
-        <a class="text-blue-800 text-sm mb-5 underline hover:opacity-60" href="index.php">Forgot password?</a>
-
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center mb-3">
           <button type="submit" name="submit"
-            class="w-full mt-3 py-2 px-10 shadow-md tracking-wider rounded-lg hover:bg-[#febd5b] bg-[#5c6f9f] font-semibold text-white border-[#2e5679] hover:text-[#002951] transition duration-300 ease-in-out">Submit</button>
+            class="w-full mt-3 py-2 px-10 shadow-md tracking-wider rounded-lg hover:bg-[#febd5b] bg-[#5c6f9f] font-semibold text-white border-[#2e5679] hover:text-[#002951] transition duration-300 ease-in-out">Enter</button>
         </div>
       </form>
 
-      <section class="text-center justify-center mt-5 flex">
-        <p class="text-gray-800 text-base">Don't have an account?</p>
-        <a class="ml-1 font-medium text-blue-800 hover:opacity-60" href="#">Sign Up</a>
+
+
+      <section class="text-end justify-between lg:mt-5 mt-0 lg:flex lg:flex-row flex flex-col-reverse">
+        <div class="flex justify-center">
+          <p class="text-gray-800 text-base">Don't have an account?</p>
+          <a class="ml-1 font-medium text-blue-800 hover:opacity-60" href="#">Sign Up</a>
+        </div>
+        <form action="index.php" method="POST">
+          <button name="forgot-pass" class="text-blue-800 text-sm hover:opacity-60 mb-3">Forgot
+            password?</button>
+        </form>
       </section>
 
       <section class="flex justify-center mt-5 mb-3 cursor-default">
@@ -116,14 +125,17 @@
           class="w-full bg-white py-2 px-3 rounded-md border-2 border-gray-300 transition-all duration-500 outline-none focus:border-[#003568] focus:text-[#004e94] mb-2 mt-3"
           type="password" name="passwordAdmin" placeholder="*">
 
-        <a class="text-blue-800 text-sm mb-5 underline hover:opacity-60" href="index.php">Forgot password?</a>
-
         <div class="flex justify-center items-center mb-5">
           <form action="query/login-email.php">
             <button type="submit" name="login"
-              class="w-full mt-3 py-2 px-10 shadow-md tracking-wider rounded-lg hover:bg-[#febd5b] bg-[#5c6f9f] font-semibold text-white border-[#2e5679] hover:text-[#002951] transition duration-300 ease-in-out block dark:hidden">Login</button>
+              class="w-full mt-3 py-2 px-10 shadow-md tracking-wider rounded-lg hover:bg-[#febd5b] bg-[#5c6f9f] font-semibold text-white border-[#2e5679] hover:text-[#002951] transition duration-300 ease-in-out block dark:hidden">Enter</button>
           </form>
         </div>
+      </form>
+
+      <form action="index.php" method="POST" class="text-end">
+        <button name="forgot-pass" class="text-blue-800 text-sm hover:opacity-60">Forgot
+          password?</button>
       </form>
     </section>
 

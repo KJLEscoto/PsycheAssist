@@ -40,8 +40,12 @@
   </div>
 
   <?php
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
-      include "modals/email-login.php";
+    if($_SERVER['REQUEST_METHOD'] === 'POST' || isset($_POST['close-forgot']) || isset($_POST['sign-in'])) {
+      include "modals/forms/email-login.php";
+    }
+
+    if(isset($_POST['forgot-pass'])) {
+      include "modals/forms/forgot-password.php";
     }
   ?>
 
