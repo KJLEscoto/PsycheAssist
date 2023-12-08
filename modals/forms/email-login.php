@@ -30,26 +30,20 @@
       <form action="#" method="POST" class="w-[350px] lg:w-[500px] mx-auto duration-300">
         <div class="lg:flex block duration-300">
           <label class="mr-2 text-gray-800">Username:</label>
-          <?php if (isset($_GET['error'])) { ?>
-          <p class="text-red-500"><?php echo "(" . $_GET['error'] . ")"?></p>
-          <?php } ?>
         </div>
         <input
           class="w-full bg-white py-2 px-3 rounded-md border-2 border-gray-300 transition-all duration-500 outline-none focus:border-[#003568] focus:text-[#004e94] mb-5 mt-3"
-          type="text" name="usernameGuest" placeholder="*">
+          type="text" name="username_guest" placeholder="*">
         <div class="flex justify-between">
           <div class="lg:flex block duration-300">
             <label class="mr-2 text-gray-800">Password:</label>
-            <?php if (isset($_GET['error'])) { ?>
-            <p class="text-red-500"><?php echo "(" . $_GET['error'] . ")"?></p>
-            <?php } ?>
           </div>
           <span onclick="togglePassword('passwordGuest')"><img
               class="w-auto h-5 opacity-75 hover:bg-[#9aaaa1] rounded-lg" src="assets/img/eye.png" alt="show"></span>
         </div>
         <input id="passwordGuest"
           class="w-full bg-white py-2 px-3 rounded-md border-2 border-gray-300 transition-all duration-500 outline-none focus:border-[#003568] focus:text-[#004e94] mb-2 mt-3"
-          type="password" name="passwordGuest" placeholder="*">
+          type="password" name="password_guest" placeholder="*">
 
         <div class="flex justify-center items-center mb-3">
           <button type="submit" name="submit"
@@ -60,12 +54,15 @@
 
 
       <section class="text-end justify-between lg:mt-5 mt-0 lg:flex lg:flex-row flex flex-col-reverse">
+
         <div class="flex justify-center">
           <p class="text-gray-800 text-base">Don't have an account?</p>
-          <a class="ml-1 font-medium text-blue-800 hover:opacity-60" href="#">Sign Up</a>
+          <form action="index.php" method="POST">
+            <button name="go-to-sign-up" class="ml-1 font-medium text-blue-800 hover:opacity-60">Sign Up</button>
+          </form>
         </div>
         <form action="index.php" method="POST">
-          <button name="forgot-pass" class="text-blue-800 text-sm hover:opacity-60 mb-3">Forgot
+          <button name="go-to-forgot-password" class="text-blue-800 text-sm hover:opacity-60 mb-3">Forgot
             password?</button>
         </form>
       </section>
@@ -104,26 +101,20 @@
       <form action="#" method="POST" class="w-[350px] lg:w-[500px] mx-auto duration-300">
         <div class="lg:flex block duration-300">
           <label class="mr-2 text-gray-800">Username:</label>
-          <?php if (isset($_GET['error'])) { ?>
-          <p class="text-red-500"><?php echo "(" . $_GET['error'] . ")"?></p>
-          <?php } ?>
         </div>
         <input
           class="w-full bg-white py-2 px-3 rounded-md border-2 border-gray-300 transition-all duration-500 outline-none focus:border-[#003568] focus:text-[#004e94] mb-5 mt-3"
-          type="text" name="usernameAdmin" placeholder="*">
+          type="text" name="username_admin" placeholder="*">
         <div class="flex justify-between">
           <div class="lg:flex block duration-300">
             <label class="mr-2 text-gray-800">Password:</label>
-            <?php if (isset($_GET['error'])) { ?>
-            <p class="text-red-500"><?php echo "(" . $_GET['error'] . ")"?></p>
-            <?php } ?>
           </div>
           <span onclick="togglePassword('passwordAdmin')"><img
               class="w-auto h-5 opacity-75 hover:bg-[#9aaaa1] rounded-lg" src="assets/img/eye.png" alt="show"></span>
         </div>
         <input id="passwordAdmin"
           class="w-full bg-white py-2 px-3 rounded-md border-2 border-gray-300 transition-all duration-500 outline-none focus:border-[#003568] focus:text-[#004e94] mb-2 mt-3"
-          type="password" name="passwordAdmin" placeholder="*">
+          type="password" name="password_admin" placeholder="*">
 
         <div class="flex justify-center items-center mb-5">
           <form action="query/login-email.php">
@@ -133,8 +124,8 @@
         </div>
       </form>
 
-      <form action="index.php" method="POST" class="text-end">
-        <button name="forgot-pass" class="text-blue-800 text-sm hover:opacity-60">Forgot
+      <form action="index.php" method="POST" class=" text-end">
+        <button name="go-to-forgot-password" class="text-blue-800 text-sm hover:opacity-60 mb-3">Forgot
           password?</button>
       </form>
     </section>

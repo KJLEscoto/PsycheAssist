@@ -5,11 +5,11 @@
     style="display: block; max-height: 85%; overflow-y: scroll;">
 
     <form action="index.php" class="flex justify-end" method="POST">
-      <button name="close-forgot"
+      <button name="go-to-login"
         class="cursor-pointer text-xl font-bold absolute top-2 right-2 text-gray-500 px-2 rounded-md hover:bg-red-400 hover:text-white">&times;</button>
     </form>
 
-    <section class="mt-6 mb-3 cursor-default font-semibold text-gray-800 text-lg flex items-center">
+    <section class="mt-6 mb-5 cursor-default font-semibold text-gray-800 text-lg flex items-center">
       <img class="w-auto h-6 mr-1" src="assets/img/padlock.png" alt="padlock">
       <h1 class="text-start font-bold">Forgot Password</h1>
     </section>
@@ -21,10 +21,10 @@
         </div>
         <input
           class="w-full bg-white py-2 px-3 rounded-md border-2 border-gray-300 transition-all duration-500 outline-none focus:border-[#003568] focus:text-[#004e94] mb-3 mt-3"
-          type="text" name="usernameGuest" placeholder="*">
+          type="email" name="email_exist_guest" placeholder="*">
         <div class="flex justify-center items-center">
           <button
-            class="w-full mt-3 py-2 px-10 shadow-md tracking-wider rounded-lg hover:bg-[#febd5b] bg-[#5c6f9f] font-semibold text-white border-[#2e5679] hover:text-[#002951] transition duration-300 ease-in-out">Enter</button>
+            class="w-full mt-2 py-2 px-10 shadow-md tracking-wider rounded-lg hover:bg-[#febd5b] bg-[#5c6f9f] font-semibold text-white border-[#2e5679] hover:text-[#002951] transition duration-300 ease-in-out">Enter</button>
         </div>
       </form>
     </section>

@@ -1,0 +1,19 @@
+Major modifications
+- email OTP validation (register-acc.php)
+- forms directory (isset.. on index.php)
+- 
+
+
+Need to be CRUD (database)
+- terms.php
+- questions
+- diagnosis
+- recommendation
+- admin info
+- user info
+-
+
+Principles needed:
+- singleton
+- factory (guest/admin)
+
